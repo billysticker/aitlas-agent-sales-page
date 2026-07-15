@@ -303,6 +303,62 @@
     .nav-cta .spots-pill{display:none}
     .recap-in{gap:26px}
   }
+
+  /* ---------- copy additions ---------- */
+  .prose{max-width:760px;margin:0 auto}
+  .prose p{font-size:17.5px;margin-bottom:18px;color:var(--muted);line-height:1.65}
+  .light .prose p{color:var(--muted-dark)}
+  .prose p strong{color:var(--white);font-weight:600}
+  .light .prose p strong{color:var(--ink)}
+  .prose ul{list-style:none;margin:22px 0}
+  .prose > ul > li{padding:14px 0 14px 28px;position:relative;font-size:16.5px;color:#DCE7F5;border-top:1px solid rgba(147,163,184,.14)}
+  .light .prose > ul > li{color:var(--ink);border-top-color:#E2E9E0}
+  .prose > ul > li::before{content:"";position:absolute;left:0;top:20px;width:14px;height:14px;border-radius:4px;background:rgba(104,188,68,.25);border:1.5px solid var(--green)}
+  .prose > ul > li strong{color:var(--white)}
+  .light .prose > ul > li strong{color:var(--ink)}
+  .pull{margin:28px auto 0;max-width:680px;padding:18px 22px;border-left:3px solid var(--green);background:rgba(104,188,68,.07);border-radius:0 12px 12px 0;font-size:16.5px;font-style:italic;color:#CFE8C0;line-height:1.55}
+  .light .pull{color:var(--ink);background:rgba(104,188,68,.1)}
+  .cred-bar{text-align:center;max-width:820px;margin:0 auto}
+  .cred-bar h2{font-size:clamp(24px,3.2vw,34px);font-weight:800;margin:18px 0 14px;line-height:1.25}
+  .cred-bar p{font-size:16.5px;color:var(--muted);line-height:1.6}
+  .light .cred-bar p{color:var(--muted-dark)}
+  .split-who{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+  .who-box{border-radius:var(--radius);padding:32px 28px;border:1px solid var(--line-light);background:var(--white)}
+  .who-box.not{background:#F8F6F3;border-color:#E5DFD6}
+  .who-box h3{font-size:18px;margin-bottom:16px}
+  .who-box ul{list-style:none}
+  .who-box li{padding:10px 0 10px 28px;position:relative;font-size:15.5px;color:var(--ink);border-top:1px solid #EDF2EA}
+  .who-box li::before{content:"";position:absolute;left:2px;top:15px;width:14px;height:14px;border-radius:4px;background:rgba(104,188,68,.25);border:1.5px solid var(--green)}
+  .who-box.not li::before{background:rgba(90,107,128,.2);border-color:var(--muted-dark)}
+  .stack-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+  .stack-card{background:var(--navy-card);border:1px solid var(--line);border-radius:var(--radius);padding:28px 26px}
+  .light .stack-card{background:var(--white);border-color:var(--line-light)}
+  .stack-card h3{font-size:18px;margin-bottom:10px}
+  .stack-card p{font-size:15px;color:var(--muted);margin-bottom:12px;line-height:1.55}
+  .light .stack-card p{color:var(--muted-dark)}
+  .stack-card .replaces{font-size:13.5px;font-style:italic;color:#CFE8C0;margin:0}
+  .light .stack-card .replaces{color:var(--green-dark)}
+  .game-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+  .game-card{background:var(--navy-card);border:1px solid var(--line);border-radius:var(--radius);padding:28px 26px}
+  .game-card .letter{font-family:'Montserrat',sans-serif;font-weight:800;color:var(--green-bright);letter-spacing:.12em;font-size:13px;margin-bottom:10px}
+  .game-card h3{font-size:18px;margin-bottom:10px}
+  .game-card p{font-size:15px;color:var(--muted);line-height:1.55}
+  .soft-bridge{text-align:center;max-width:720px;margin:0 auto;padding:8px 0 0}
+  .soft-bridge p{color:var(--muted);font-size:15.5px;line-height:1.6}
+  .soft-bridge a{color:var(--green-bright);text-decoration:underline;text-underline-offset:3px}
+  .cta-micro{margin-top:14px;font-size:13.5px;color:var(--muted);line-height:1.5}
+  .hero .cta-micro{max-width:540px;text-align:left}
+  .promise-line{font-size:18px;color:var(--muted);max-width:640px;margin:0 0 22px;line-height:1.55}
+  .promise-line strong{color:var(--white);font-weight:600}
+  .wiifm{max-width:760px;margin:36px auto 0}
+  .wiifm ul{list-style:none}
+  .wiifm li{padding:12px 0 12px 28px;position:relative;font-size:16px;color:#DCE7F5;border-top:1px solid rgba(147,163,184,.14)}
+  .light .wiifm li{color:var(--ink);border-top-color:#E2E9E0}
+  .wiifm li::before{content:"";position:absolute;left:0;top:18px;width:14px;height:14px;border-radius:4px;background:rgba(104,188,68,.25);border:1.5px solid var(--green)}
+  @media (max-width:960px){
+    .split-who,.stack-grid,.game-grid{grid-template-columns:1fr}
+  }
+
 </style>
 </head>
 <body>
@@ -324,7 +380,7 @@
     <div class="hero-in">
       <span class="eyebrow"><span class="dot"></span>Founding Cohort &middot; 10 Practices &middot; Built by ChiroCandy</span>
       <h1>You Watched Aitlas Analyze a Real Practice. <span class="g">Now Put It to Work on Yours.</span></h1>
-      <p class="sub">Aitlas is a custom-built practice intelligence agent that watches your marketing every week and tells your team exactly what to work on next. <strong>You saw what it found in one afternoon. Imagine what it is not finding in your practice right now.</strong></p>
+      <p class="sub">Aitlas is a custom-built practice intelligence agent that watches your marketing every week and tells your team exactly what to work on next. <strong>You saw what it found in one afternoon. Imagine what it is not finding in your practice right now.</strong> It is not a chatbot you have to remember to use. It is a team member with a job description.</p>
       <div class="cta-row">
         <!-- TODO: replace # with checkout URL -->
         <a class="btn btn-green stacked" href="#pricing">Activate Aitlas Now<small>Full checkout, build starts this week</small></a>
@@ -387,9 +443,32 @@
           <li>Watches while you adjust patients</li>
           <li>Weekly Growth Brief with priorities, not raw data</li>
           <li>Your team asks it questions in plain English, any time</li>
+          <li>Does jobs you currently pay separate vendors for: strategy, audits, SEO, SOPs, and admin</li>
         </ul>
       </div>
     </div>
+  </div>
+</section>
+
+
+<!-- ============ CHATBOT OBJECTION ============ -->
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow"><span class="dot"></span>Not Another Tool</span>
+      <h2>A Chatbot Waits for You. Aitlas Works for You.</h2>
+    </div>
+    <div class="prose">
+      <p>You have probably tried ChatGPT. Maybe your front desk uses it to draft an email now and then. That is a chatbot: a smart tool that sits there until someone remembers to use it, then forgets everything the moment the tab closes.</p>
+      <p>Aitlas is different in three ways that matter.</p>
+      <ul>
+        <li><strong>It holds responsibilities, not conversations.</strong> A chatbot answers questions. Aitlas has a job description: watch your rankings, track your competitors, monitor your reviews, flag your inactive patients, and report to you every Monday. You do not have to remember to use it. It shows up whether you log in or not.</li>
+        <li><strong>It knows your practice.</strong> A chatbot starts from zero every time. Aitlas is built on a private knowledge base: your services, your market, your voice, your playbooks. Ask it to draft a GBP post and it sounds like you. Ask it why new patients are down and it answers from your data, not generic advice.</li>
+        <li><strong>It gets things done, not just said.</strong> Chatbots produce text. Aitlas produces outcomes: a prioritized plan, drafted posts ready for review, a reactivation sequence queued for your team, a competitor alert before the ranking slips.</li>
+      </ul>
+      <p>The tools you have tried sit unused because they wait for you. Aitlas does not wait.</p>
+    </div>
+    <blockquote class="pull">"If your AI only works when you remember to open it, you do not have an agent. You have a very smart notepad."</blockquote>
   </div>
 </section>
 
@@ -411,6 +490,25 @@
 </section>
 
 <!-- ============ GROWTH BRIEF ============ -->
+
+<!-- ============ SHINY OBJECT ============ -->
+<section class="light">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow"><span class="dot"></span>The Honest Question</span>
+      <h2>Is This a Shiny Object? Here Is the Test.</h2>
+    </div>
+    <div class="prose">
+      <p>Fair question. You have bought marketing shiny objects before. So have we, honestly. Here is how you tell the difference.</p>
+      <p>A shiny object is something nobody will be using in two years. AI agents are the exact opposite. In two years, every serious practice will have one. The technology is not going away. The only variable is the date on the calendar when yours starts working.</p>
+      <p>Which means the real question is not "is this a fad." It is "do I want this running for my practice before or after my competitors have theirs."</p>
+      <p>The practices that got on Google reviews early own the map pack today. The practices that started posting content early own the search results. The window where an AI agent is an advantage instead of table stakes is open right now. It will not stay open.</p>
+      <p>One more test. Shiny objects add work: another login, another dashboard, another thing to learn. Aitlas removes work. It replaces the 3 to 5 hours of weekly auditing you would otherwise do by hand, and it takes over jobs you are already paying other people to do. A shiny object costs you money. Aitlas replaces line items.</p>
+    </div>
+    <blockquote class="pull">"Every practice in your market will eventually have an agent. Founding members just get theirs two years early, at founding pricing."</blockquote>
+  </div>
+</section>
+
 <section class="light">
   <div class="wrap brief-wrap">
     <div class="brief-copy">
@@ -487,6 +585,63 @@
 </section>
 
 <!-- ============ PRICING ============ -->
+
+<!-- ============ VALUE STACK ============ -->
+<section class="light">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow"><span class="dot"></span>Beyond the Brief</span>
+      <h2>The Growth Brief Is Monday Morning. Here Is the Rest of the Week.</h2>
+      <p>The weekly brief is the anchor. But Aitlas is not a report generator. It is an agent on your team, and between briefs your team puts it to work on jobs you are paying for right now, one invoice at a time.</p>
+    </div>
+    <div class="stack-grid">
+      <div class="stack-card">
+        <h3>Marketing Strategist</h3>
+        <p>Plans your marketing, researches campaign angles, and helps you launch. Ask it what to run this quarter and it answers from your market, your patient data, and the Trust/Known/Found lens, not a template.</p>
+        <p class="replaces">What this replaces: the strategy layer of a marketing consultant or agency retainer.</p>
+      </div>
+      <div class="stack-card">
+        <h3>Campaign Analyst</h3>
+        <p>Audits your ads and campaigns, spots what is leaking, and tells you what to fix in plain English. Before you spend another dollar, Aitlas tells you where the last dollar went.</p>
+        <p class="replaces">What this replaces: paying someone to "look at your ads" every time something feels off.</p>
+      </div>
+      <div class="stack-card">
+        <h3>Website and Search Watchdog</h3>
+        <p>Audits your website, plans improvements, and keeps you visible where patients actually look: Google search, the map pack, and now AI search. When someone asks ChatGPT for a chiropractor in your city, Aitlas is working on making you the answer.</p>
+        <p class="replaces">What this replaces: standalone SEO retainers and one-off website audits.</p>
+      </div>
+      <div class="stack-card">
+        <h3>Company Brain</h3>
+        <p>Load in your SOPs, your practice management playbooks, your consulting materials, your scripts, your training docs. Aitlas makes all of it searchable and usable. New front desk hire asks "how do we handle a reschedule," and gets your answer, in your words, instantly.</p>
+        <p class="replaces">What this replaces: the knowledge that currently lives only in your head and walks out the door with every staff departure.</p>
+      </div>
+      <div class="stack-card">
+        <h3>Team Trainer</h3>
+        <p>Helps you onboard new hires, build and refine SOPs, and turn every "how do we do this again" into a documented answer. Your best staff member's knowledge stops being a single point of failure.</p>
+        <p class="replaces">What this replaces: the weeks of your personal time every new hire currently costs you.</p>
+      </div>
+      <div class="stack-card">
+        <h3>Executive Assistant</h3>
+        <p>Meeting prep, morning briefs, drafted replies, follow-up tracking, open-loop reminders. The admin layer that eats your margins between patients, handled.</p>
+        <p class="replaces">What this replaces: the tasks you do at 9 PM because there was no one else to do them.</p>
+      </div>
+    </div>
+    <div class="prose" style="margin-top:40px">
+      <p><strong>Add up what you currently pay across those line items.</strong> Most practices land somewhere between $2,000 and $5,000 a month, scattered across vendors who do not talk to each other. Aitlas is one agent, one knowledge base, one flat number, and it gets smarter about your practice every week instead of starting over with every new vendor.</p>
+    </div>
+    <div class="wiifm light">
+      <ul>
+        <li>You stop being the only person in the building who knows how the marketing works.</li>
+        <li>Your office manager runs Monday's marketing from a four-minute brief instead of a guess.</li>
+        <li>You find out a competitor passed you on the map before it costs you patients, not after.</li>
+        <li>Inactive patients get caught at day 90, not discovered at year end.</li>
+        <li>New hires get trained by your playbook instead of by interrupting you.</li>
+        <li>You show up when patients ask AI "who is the best chiropractor near me," which is already happening in your market this week.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
 <section class="light" id="pricing">
   <div class="wrap">
     <div class="sec-head">
@@ -494,7 +649,7 @@
       <h2>What It Costs to Have Aitlas on Your Team</h2>
     </div>
     <div class="anchor-strip">
-      <p>A part-time marketing analyst who watched your practice this closely would run $2,000 to $3,000 a month, and would still take weeks to learn your market. One recovered reactivation opportunity or one regained map ranking typically covers more than a year of Aitlas.</p>
+      <p>Add up what practices typically pay across the jobs Aitlas covers: marketing strategy, campaign audits, SEO, website audits, and staff training support. Most land between $2,000 and $5,000 a month across vendors who never talk to each other. Aitlas is $349 a month, plus a one-time $2,500 founding activation. One recovered reactivation opportunity or one regained map ranking typically covers more than a year.</p>
       <p class="math">Aitlas is $349 a month, plus a one-time $2,500 founding activation.</p>
     </div>
     <div class="price-grid">
@@ -601,6 +756,44 @@
   </div>
 </section>
 
+
+<!-- ============ G.A.M.E. ============ -->
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow"><span class="dot"></span>Governed, Not Just Deployed</span>
+      <h2>Is It Safe? Here Is Exactly How We Govern It.</h2>
+      <p>Most AI products hope you never ask this question. We built our company answering it. Every Aitlas deployment runs on the G.A.M.E. framework, the same governance model from our founder's book on running AI safely in a business. Four letters, four commitments.</p>
+    </div>
+    <div class="game-grid">
+      <div class="game-card">
+        <div class="letter">G &middot; GUARDRAILS</div>
+        <h3>Hard boundaries, set in writing</h3>
+        <p>Aitlas operates inside hard boundaries set before it ever runs. It is deliberately scoped to your marketing and operations and kept away from protected patient health information, so your compliance surface stays clean. It cannot wander into systems it was not built for. The lines are drawn during your build, on purpose, in writing.</p>
+      </div>
+      <div class="game-card">
+        <div class="letter">A &middot; ACCOUNTABILITY</div>
+        <h3>It drafts. Your team approves.</h3>
+        <p>Every recommendation is traceable and every action has an owner. Aitlas does not take meaningful actions on its own authority: it drafts, you or your team approve. Nothing goes out the door without a human name attached to the decision. If you ever ask "why did it suggest this," there is an answer, not a shrug.</p>
+      </div>
+      <div class="game-card">
+        <div class="letter">M &middot; MONITORING</div>
+        <h3>The watcher gets watched</h3>
+        <p>Our team monitors every Aitlas deployment: output quality, behavior inside its guardrails, and usage patterns. This is part of what Managed Intelligence means. You are not left alone with an AI and a settings screen, hoping it behaves.</p>
+      </div>
+      <div class="game-card">
+        <div class="letter">E &middot; ENABLEMENT</div>
+        <h3>Confident use, not quiet fear</h3>
+        <p>Governance is not about limiting what your team can do. It is about making them confident enough to actually use it. Your team gets orientation, the Prompt and Playbook Library, and a monthly human touchpoint, so Aitlas gets used safely instead of feared quietly or misused accidentally.</p>
+      </div>
+    </div>
+    <div class="prose" style="margin-top:36px">
+      <p>Anyone can hand you an AI tool. Governing one is the hard part, and it is the part we do not skip.</p>
+    </div>
+    <blockquote class="pull">"The question is not whether your practice will use AI. It is whether the AI you use is governed. Ours is, by design, from day one."</blockquote>
+  </div>
+</section>
+
 <!-- ============ FAQ ============ -->
 <section>
   <div class="wrap narrow">
@@ -611,6 +804,26 @@
     <details>
       <summary>Is this HIPAA-safe for my practice?</summary>
       <div class="a">Aitlas is scoped to your marketing and operations: reviews, rankings, GBP, content, competitors, reactivation workflows. It is deliberately kept away from protected patient health information, which keeps your compliance surface clean. We built our company around healthcare marketing, so this line is drawn carefully and on purpose.</div>
+    </details>
+    <details>
+      <summary>How do I know it is safe and secure?</summary>
+      <div class="a">Every Aitlas runs on our G.A.M.E. governance framework: Guardrails (hard boundaries set at build, including a deliberate wall between Aitlas and protected patient health information), Accountability (Aitlas drafts, humans approve, every decision has an owner), Monitoring (our team watches every deployment as part of Managed Intelligence), and Enablement (your team is trained to use it confidently and correctly). This is the governance model from our founder's book on running AI in business. You are not adopting an experiment. You are adopting a governed system.</div>
+    </details>
+    <details>
+      <summary>Is this just a fancy chatbot?</summary>
+      <div class="a">No, and the difference is the whole product. A chatbot waits for you to prompt it and forgets you when you close the tab. Aitlas holds standing responsibilities: it monitors your practice continuously, knows your business from a private knowledge base we build during activation, and delivers work on a schedule whether you log in or not. You can chat with it, and your team will. But the chat is the smallest thing it does.</div>
+    </details>
+    <details>
+      <summary>We have been burned by shiny objects before. Why is this different?</summary>
+      <div class="a">Shiny objects add work and disappear in two years. Aitlas removes work, and agents are headed the other direction: within a few years every serious practice will run one. The only real decision is whether yours starts compounding before or after your competitors' do. Also worth noting: the 90-day term exists exactly for this objection. If it has not earned its seat by then, you walk.</div>
+    </details>
+    <details>
+      <summary>Will my team actually use it?</summary>
+      <div class="a">That is why the build exists. Aitlas arrives already knowing your practice, your voice, and your workflows, and the founding Prompt and Playbook Library means nobody stares at a blank chat box. In our experience, the tools that go unused are the ones that show up empty and wait. Aitlas shows up working.</div>
+    </details>
+    <details>
+      <summary>Can it really help with more than marketing?</summary>
+      <div class="a">Yes. Marketing is the anchor because that is what grows the practice, but founding members load in SOPs, practice management playbooks, training materials, and consulting frameworks. Aitlas becomes the company brain: staff ask it operational questions, you use it for planning and executive assistant work, and it keeps every answer consistent with how you run your practice.</div>
     </details>
     <details>
       <summary>How much time does my team actually need to put in?</summary>
@@ -639,12 +852,13 @@
 <section style="background:linear-gradient(180deg,var(--navy) 0%,var(--navy-deep) 100%);border-top:1px solid var(--line)">
   <div class="wrap check-close">
     <span class="eyebrow"><span class="dot"></span>Is This You</span>
-    <h2 style="font-size:clamp(30px,4.2vw,44px);font-weight:800;margin:22px 0 8px">Four Honest Questions Before You Decide</h2>
+    <h2 style="font-size:clamp(30px,4.2vw,44px);font-weight:800;margin:22px 0 8px">Five Honest Questions Before You Decide</h2>
     <ul class="check-list">
       <li>Do you feel responsible for getting your care to more people in your community?</li>
       <li>Would your patients be better served if you had more time and more capacity?</li>
       <li>Does it make sense to add one proven system instead of chasing ten more tools?</li>
       <li>Did watching Aitlas analyze a real practice pull at you? Then it is worth a real look.</li>
+      <li>Will your competitors have an agent within two years? Then the only question left is timing.</li>
     </ul>
     <div class="cta-row">
       <!-- TODO: replace # with checkout URL -->
@@ -652,7 +866,7 @@
       <!-- TODO: replace # with deposit URL -->
       <a class="btn btn-ghost stacked" href="#pricing">Reserve My Spot for $500<small>Refundable, applies to activation</small></a>
     </div>
-    <p class="assure">Ten spots. When the tenth activation comes in, this page comes down.</p>
+    <p class="assure"><b>Every practice in your market will eventually have one of these. Ten of them get to be first.</b> When the tenth activation comes in, this page comes down.</p>
   </div>
 </section>
 

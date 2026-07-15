@@ -303,6 +303,57 @@
     .nav-cta .spots-pill{display:none}
     .recap-in{gap:26px}
   }
+
+  /* ---------- copy additions ---------- */
+  .prose{max-width:760px;margin:0 auto}
+  .prose p{font-size:17.5px;margin-bottom:18px;color:var(--muted);line-height:1.65}
+  .light .prose p{color:var(--muted-dark)}
+  .prose p strong{color:var(--white);font-weight:600}
+  .light .prose p strong{color:var(--ink)}
+  .prose ul{list-style:none;margin:22px 0}
+  .prose > ul > li{padding:14px 0 14px 28px;position:relative;font-size:16.5px;color:#DCE7F5;border-top:1px solid rgba(147,163,184,.14)}
+  .light .prose > ul > li{color:var(--ink);border-top-color:#E2E9E0}
+  .prose > ul > li::before{content:"";position:absolute;left:0;top:20px;width:14px;height:14px;border-radius:4px;background:rgba(104,188,68,.25);border:1.5px solid var(--green)}
+  .prose > ul > li strong{color:var(--white)}
+  .light .prose > ul > li strong{color:var(--ink)}
+  .pull{margin:28px auto 0;max-width:680px;padding:18px 22px;border-left:3px solid var(--green);background:rgba(104,188,68,.07);border-radius:0 12px 12px 0;font-size:16.5px;font-style:italic;color:#CFE8C0;line-height:1.55}
+  .light .pull{color:var(--ink);background:rgba(104,188,68,.1)}
+  .cred-bar{text-align:center;max-width:820px;margin:0 auto}
+  .cred-bar h2{font-size:clamp(24px,3.2vw,34px);font-weight:800;margin:18px 0 14px;line-height:1.25}
+  .cred-bar p{font-size:16.5px;color:var(--muted);line-height:1.6}
+  .light .cred-bar p{color:var(--muted-dark)}
+  .split-who{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+  .who-box{border-radius:var(--radius);padding:32px 28px;border:1px solid var(--line-light);background:var(--white)}
+  .who-box.not{background:#F8F6F3;border-color:#E5DFD6}
+  .who-box h3{font-size:18px;margin-bottom:16px}
+  .who-box ul{list-style:none}
+  .who-box li{padding:10px 0 10px 28px;position:relative;font-size:15.5px;color:var(--ink);border-top:1px solid #EDF2EA}
+  .who-box li::before{content:"";position:absolute;left:2px;top:15px;width:14px;height:14px;border-radius:4px;background:rgba(104,188,68,.25);border:1.5px solid var(--green)}
+  .who-box.not li::before{background:rgba(90,107,128,.2);border-color:var(--muted-dark)}
+  .stack-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+  .stack-card{background:var(--navy-card);border:1px solid var(--line);border-radius:var(--radius);padding:28px 26px}
+  .light .stack-card{background:var(--white);border-color:var(--line-light)}
+  .stack-card h3{font-size:18px;margin-bottom:10px}
+  .stack-card p{font-size:15px;color:var(--muted);margin-bottom:12px;line-height:1.55}
+  .light .stack-card p{color:var(--muted-dark)}
+  .stack-card .replaces{font-size:13.5px;font-style:italic;color:#CFE8C0;margin:0}
+  .light .stack-card .replaces{color:var(--green-dark)}
+  .game-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+  .game-card{background:var(--navy-card);border:1px solid var(--line);border-radius:var(--radius);padding:28px 26px}
+  .game-card .letter{font-family:'Montserrat',sans-serif;font-weight:800;color:var(--green-bright);letter-spacing:.12em;font-size:13px;margin-bottom:10px}
+  .game-card h3{font-size:18px;margin-bottom:10px}
+  .game-card p{font-size:15px;color:var(--muted);line-height:1.55}
+  .soft-bridge{text-align:center;max-width:720px;margin:0 auto;padding:8px 0 0}
+  .soft-bridge p{color:var(--muted);font-size:15.5px;line-height:1.6}
+  .soft-bridge a{color:var(--green-bright);text-decoration:underline;text-underline-offset:3px}
+  .cta-micro{margin-top:14px;font-size:13.5px;color:var(--muted);line-height:1.5}
+  .hero .cta-micro{max-width:540px;text-align:left}
+  .promise-line{font-size:18px;color:var(--muted);max-width:640px;margin:0 0 22px;line-height:1.55}
+  .promise-line strong{color:var(--white);font-weight:600}
+  @media (max-width:960px){
+    .split-who,.stack-grid,.game-grid{grid-template-columns:1fr}
+  }
+
 </style>
 </head>
 <body>
@@ -314,7 +365,7 @@
     <div class="nav-cta">
       <span class="spots-pill">Free training &middot; includes a live practice analysis</span>
       <!-- TODO: replace # with training registration/watch URL -->
-      <a class="btn btn-green" href="#">Watch the Training</a>
+      <a class="btn btn-green" href="#">Watch Aitlas Analyze a Real Practice</a>
     </div>
   </div>
 </nav>
@@ -325,12 +376,14 @@
     <div class="hero-in">
       <span class="eyebrow"><span class="dot"></span>Free Training for Chiropractors &middot; By ChiroCandy</span>
       <h1>Your Marketing Has Blind Spots. <span class="g">Meet the Agent That Watches Them for You.</span></h1>
+      <p class="promise-line"><strong>You do not need another AI tool.</strong> You need to see what this one already knows about your practice.</p>
       <p class="sub">In this free training you will watch Aitlas, a practice intelligence agent, analyze a real chiropractic practice live: reviews, rankings, competitors, and follow-up. <strong>Then you will learn the exact system it runs, so you can use it with or without us.</strong></p>
       <div class="cta-row">
         <!-- TODO: replace # with training registration/watch URL -->
-        <a class="btn btn-green stacked" href="#">Watch the Training<small>Free, on demand, about 60 minutes</small></a>
+        <a class="btn btn-green stacked" href="#">Watch Aitlas Analyze a Real Practice<small>Free, on demand, about 45 minutes</small></a>
         <a class="btn btn-ghost stacked" href="#learn">See What Is Inside<small>The full breakdown, right on this page</small></a>
       </div>
+      <p class="cta-micro">No email required to watch. &middot; 45 minutes. Notepad optional. The middle is the point.</p>
       <p class="assure"><b>No pitch-only fluff.</b> You leave with a system you can run Monday morning, agent or no agent.</p>
     </div>
     <div class="hero-fig" aria-hidden="true">
@@ -357,6 +410,54 @@
     <div class="recap-item"><b>A <em>Live</em> Practice Analysis</b>Watch it happen on a real practice</div>
   </div>
 </div>
+
+
+<!-- ============ WALK AWAY WITH ============ -->
+<section class="light" id="walk-away">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow"><span class="dot"></span>What You Walk Away With</span>
+      <h2>Watch this once and you will never look at your practice's marketing the same way.</h2>
+    </div>
+    <div class="prose">
+      <p>No slides for 40 minutes. No "and now for a special offer." A working AI agent, analyzing a real chiropractic practice, in front of you.</p>
+      <p>By the end you will have:</p>
+      <ul>
+        <li><strong>A lens for looking at your practice's marketing</strong> that beats any dashboard you have used, because it explains what actually drives new patients.</li>
+        <li><strong>A vocabulary for what an "AI agent" actually is</strong>, and the four things separating a real one from a smart chatbot.</li>
+        <li><strong>The four jobs any practice should be doing every week</strong> to stay found, trusted, and chosen, whether or not you ever hire an agent to do them.</li>
+        <li><strong>A live view of what an AI agent finds</strong> in the first hour it looks at a chiropractic practice's marketing footprint.</li>
+      </ul>
+      <p>Whether you ever buy anything from us, you walk away with a better operating model for your practice. That is the promise.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SKEPTICISM PRE-FRAME ============ -->
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow"><span class="dot"></span>Before you press play</span>
+      <h2>Yes, We Know. You Have Seen AI Pitches Before.</h2>
+    </div>
+    <div class="prose">
+      <p>So have we. Most of them are chatbot demos dressed up as strategy. Someone shows you a prompt, gets a passable email back, and calls it a revolution.</p>
+      <p>That is not what the next 45 minutes are.</p>
+      <p>We are going to show you an actual practice, on a live tool, and let it find things you would not have found in a week of staring at your own numbers. If it is a shiny object, you will know inside ten minutes and can close the tab with our blessing. If it is not, you will know that too.</p>
+      <p>Either way, the operating model you get for free is worth the time.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CREDIBILITY ============ -->
+<section class="light" style="padding-top:72px;padding-bottom:72px">
+  <div class="wrap">
+    <div class="cred-bar">
+      <h2>Built by the team that has done this for 2,000+ chiropractic offices since 2015.</h2>
+      <p>This is not a general AI company chasing healthcare. It is a chiropractic marketing company that spent the last two years building an agent for the practices we already understand. That means the guardrails, the scope, the compliance lines, and the vocabulary are all set for chiropractic on purpose. That matters more than it sounds like it does.</p>
+    </div>
+  </div>
+</section>
 
 <!-- ============ TWO CHOICES ============ -->
 <section class="light">
@@ -442,7 +543,7 @@
   <div class="wrap narrow">
     <div class="sec-head">
       <span class="eyebrow"><span class="dot"></span>Inside the Training</span>
-      <h2>What Happens in the Next 60 Minutes</h2>
+      <h2>What Happens in the Next 45 Minutes</h2>
       <p>Four parts. No filler. Built so your team can act on it the same week.</p>
     </div>
     <div class="bonus">
@@ -476,7 +577,38 @@
     </div>
     <div style="text-align:center;margin-top:44px">
       <!-- TODO: replace # with training registration/watch URL -->
-      <a class="btn btn-green stacked" href="#">Watch the Training<small>Free, on demand, about 60 minutes</small></a>
+      <a class="btn btn-green stacked" href="#">Watch Aitlas Analyze a Real Practice<small>Free, on demand, about 45 minutes</small></a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============ WHO THIS IS FOR ============ -->
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow"><span class="dot"></span>Is This You</span>
+      <h2>Who This Masterclass Is For</h2>
+      <p>Self-qualify before you press play. The middle is the point, and it is built for a specific kind of practice owner.</p>
+    </div>
+    <div class="split-who">
+      <div class="who-box">
+        <h3>This is for you if</h3>
+        <ul>
+          <li>You run or own a chiropractic practice and are the one who ends up worrying about the marketing.</li>
+          <li>You have tried AI tools, seen the potential, and also seen how quickly they get abandoned.</li>
+          <li>You are ready to be honest about which parts of your practice's growth are running on hope and which are running on a system.</li>
+          <li>You would rather see one thing work than hear about ten things that might.</li>
+        </ul>
+      </div>
+      <div class="who-box not">
+        <h3>It is probably not for you if</h3>
+        <ul>
+          <li>You are looking for a chatbot to answer phones. This is not that.</li>
+          <li>You are not willing to look at your practice's marketing footprint with fresh eyes.</li>
+          <li>You want a demo you can pause and skip through. This is a live walkthrough, and the middle is the point.</li>
+        </ul>
+      </div>
     </div>
   </div>
 </section>
@@ -489,20 +621,28 @@
       <h2>Before You Press Play</h2>
     </div>
     <details>
-      <summary>Is this actually a training, or a long sales pitch?</summary>
-      <div class="a">It is a training with an offer at the end, and we are upfront about that. The first three parts stand on their own: the Trust / Known / Found lens, the chat-versus-agents distinction, and a live practice analysis. If you never spend a dollar with us, you still leave with a system your team can run manually.</div>
+      <summary>How long is this?</summary>
+      <div class="a">About 45 minutes. The live practice analysis is the middle, and the middle is the reason to watch.</div>
+    </details>
+    <details>
+      <summary>Do I have to buy anything?</summary>
+      <div class="a">No. There is a founding cohort offer at the end for practices that want to put Aitlas to work on theirs. It is deliberately small and deliberately limited. If it is not for you, the operating model in the first 40 minutes stands on its own.</div>
+    </details>
+    <details>
+      <summary>Is this a sales pitch dressed up as training?</summary>
+      <div class="a">The first 40 minutes are training and a live walkthrough. The last 5 tell you what a founding spot costs. If that is not your speed, close the tab at the 40 minute mark and you still leave with a better lens for your practice.</div>
+    </details>
+    <details>
+      <summary>Is this compliant with how a chiropractic practice has to operate?</summary>
+      <div class="a">Yes, by design. We come from healthcare marketing. Aitlas is deliberately scoped away from protected patient health information. You will see exactly where the lines are drawn in the walkthrough.</div>
+    </details>
+    <details>
+      <summary>Will there be a replay?</summary>
+      <div class="a">Yes. It is on demand, so watch it now while you have 45 quiet minutes, or come back after your last patient. The founding cohort at the end is limited to 10 practices, so sooner beats later.</div>
     </details>
     <details>
       <summary>I am not technical. Will this go over my head?</summary>
       <div class="a">No. It is built for practice owners, not developers. No jargon, no setup screens, no code. If you can read an email, you can follow every minute of it.</div>
-    </details>
-    <details>
-      <summary>Is AI even safe to use in a healthcare practice?</summary>
-      <div class="a">This is covered directly in the training. The short version: the system is scoped to marketing and operations, deliberately away from protected patient health information, which keeps your compliance surface clean. We have built healthcare marketing since 2015 and this line is drawn carefully, on purpose.</div>
-    </details>
-    <details>
-      <summary>How long is it, and can I watch it later?</summary>
-      <div class="a">About 60 minutes, on demand. Watch it tonight after your last patient or Sunday with coffee. That said, the founding cohort mentioned at the end is 10 practices, so sooner beats later.</div>
     </details>
     <details>
       <summary>We already work with ChiroCandy. Is this still worth watching?</summary>
@@ -524,9 +664,13 @@
     </ul>
     <div class="cta-row">
       <!-- TODO: replace # with training registration/watch URL -->
-      <a class="btn btn-green stacked" href="#">Watch the Training<small>Free, on demand, about 60 minutes</small></a>
+      <a class="btn btn-green stacked" href="#">Watch Aitlas Analyze a Real Practice<small>Free, on demand, about 45 minutes</small></a>
     </div>
-    <p class="assure">Free training. Live practice analysis included. The founding cohort of 10 is revealed at the end.</p>
+        <p class="assure">Free training. Live practice analysis included. The founding cohort of 10 is revealed at the end.</p>
+    <div class="soft-bridge">
+      <p>The masterclass ends with a founding cohort offer for ten practices. Not because there is a marketing reason to cap it, but because there is only so much custom build our team can do at once. If you know before you watch that you want your practice in that cohort, the door is open. If you do not, the masterclass stands alone and no one will chase you for the offer.</p>
+      <p style="margin-top:14px"><a href="/limited-offer">See the founding cohort terms &rarr;</a></p>
+    </div>
   </div>
 </section>
 
