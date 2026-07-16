@@ -398,10 +398,8 @@
       <h1>You Watched Aitlas Analyze a Real Practice. <span class="g">Now Put It to Work on Yours.</span></h1>
       <p class="sub"><strong>Aitlas is a Practice Intelligence Agent.</strong> Custom built for your practice. It learns your business, sees what you cannot see from inside it, and makes every part of your growth engine smarter, week after week. This is not a tool you use. It is intelligence that runs.</p>
       <div class="cta-row">
-        <!-- TODO: replace # with checkout URL -->
-        <a class="btn btn-green stacked" href="#pricing">Activate Aitlas Now<small>Full checkout, build starts this week</small></a>
-        <!-- TODO: replace # with deposit URL -->
-        <a class="btn btn-ghost stacked" href="#pricing">Reserve My Spot for $500<small>Fully refundable deposit, applies to activation</small></a>
+        <a class="btn btn-green stacked" href="https://sendlink.co/documents/doc-form/6a57e810d0600e479b2acc12?locale=en-US" target="_blank" rel="noopener noreferrer">Activate Aitlas Now<small>Full checkout, build starts this week</small></a>
+        <a class="btn btn-ghost stacked" href="https://go.chirocandy.com/aitlas-deposit" target="_blank" rel="noopener noreferrer">Reserve My Spot for $500<small>Fully refundable deposit, applies to activation</small></a>
       </div>
       <p class="assure"><b>$349/month + $2,500 activation.</b> No long-term contract. 90-day initial term.</p>
     </div>
@@ -719,8 +717,7 @@
           <li>Managed Intelligence, usage included</li>
           <li>All founding bonuses below, locked in</li>
         </ul>
-        <!-- TODO: replace with live checkout URL -->
-        <a class="btn btn-green" href="#" aria-label="Activate Aitlas now, full checkout">Activate Aitlas Now</a>
+        <a class="btn btn-green" href="https://sendlink.co/documents/doc-form/6a57e810d0600e479b2acc12?locale=en-US" target="_blank" rel="noopener noreferrer" aria-label="Activate Aitlas now, full checkout">Activate Aitlas Now</a>
       </div>
       <div class="price-card alt">
         <h3>Reserve With a $500 Deposit</h3>
@@ -733,8 +730,7 @@
           <li>If either of us decides it is not a fit, full refund</li>
           <li>Founding pricing and bonuses protected while you decide</li>
         </ul>
-        <!-- TODO: replace with live deposit URL -->
-        <a class="btn btn-ghost" href="#" aria-label="Reserve a founding spot with a 500 dollar refundable deposit">Reserve My Spot for $500</a>
+        <a class="btn btn-ghost" href="https://go.chirocandy.com/aitlas-deposit" target="_blank" rel="noopener noreferrer" aria-label="Reserve a founding spot with a 500 dollar refundable deposit">Reserve My Spot for $500</a>
       </div>
     </div>
   </div>
@@ -748,8 +744,8 @@
       <h2>Activate in the Fast-Action Window and Keep These</h2>
     </div>
     <div class="deadline-bar">
-      <p>The second seat bonus closes <b>[DAY, DATE] at [TIME] [TIMEZONE]</b>, or when the tenth spot fills, whichever comes first.</p>
-      <div class="clock" id="countdown" aria-live="polite">48:00:00</div>
+      <p>The second seat bonus closes <b>Friday, July 31, 2026 at 11:59&nbsp;PM&nbsp;CT</b>, or when the tenth spot fills, whichever comes first.</p>
+      <div class="clock" id="countdown" aria-live="polite">--:--:--</div>
     </div>
     <div class="bonus">
       <div class="bnum">BONUS 01<span class="val">$1,000 + $99/mo value</span></div>
@@ -921,10 +917,8 @@
       <li>Will your competitors have an agent within two years? Then the only question left is timing.</li>
     </ul>
     <div class="cta-row">
-      <!-- TODO: replace # with checkout URL -->
-      <a class="btn btn-green stacked" href="#pricing">Activate Aitlas Now<small>$349/month + $2,500 activation</small></a>
-      <!-- TODO: replace # with deposit URL -->
-      <a class="btn btn-ghost stacked" href="#pricing">Reserve My Spot for $500<small>Refundable, applies to activation</small></a>
+      <a class="btn btn-green stacked" href="https://sendlink.co/documents/doc-form/6a57e810d0600e479b2acc12?locale=en-US" target="_blank" rel="noopener noreferrer">Activate Aitlas Now<small>$349/month + $2,500 activation</small></a>
+      <a class="btn btn-ghost stacked" href="https://go.chirocandy.com/aitlas-deposit" target="_blank" rel="noopener noreferrer">Reserve My Spot for $500<small>Refundable, applies to activation</small></a>
     </div>
     <p class="assure"><b>Ten founding practices. First to be learned. First to compound.</b> When the tenth activation comes in, this page comes down.</p>
   </div>
@@ -952,27 +946,19 @@
 </script>
 
 <script>
-  // ===== 48-hour countdown =====
-  // TODO: set the real deadline before launch, e.g. "2026-07-18T20:00:00-05:00"
-  var DEADLINE = null; // leave null to count 48h from first page visit (per-browser), or set an ISO date string
+  // ===== Bonus deadline countdown =====
+  var DEADLINE = '2026-07-31T23:59:00-05:00';
   (function(){
     var el = document.getElementById('countdown');
     if(!el) return;
-    var end;
-    if(DEADLINE){ end = new Date(DEADLINE).getTime(); }
-    else {
-      try{
-        var saved = localStorage.getItem('aitlas_deadline');
-        if(!saved){ saved = String(Date.now() + 48*3600*1000); localStorage.setItem('aitlas_deadline', saved); }
-        end = parseInt(saved,10);
-      }catch(e){ end = Date.now() + 48*3600*1000; }
-    }
+    var end = new Date(DEADLINE).getTime();
     function pad(n){ return (n<10?'0':'')+n; }
     function tick(){
       var d = end - Date.now();
       if(d <= 0){ el.textContent = 'Window closed'; return; }
-      var h = Math.floor(d/3600000), m = Math.floor(d%3600000/60000), s = Math.floor(d%60000/1000);
-      el.textContent = pad(h)+':'+pad(m)+':'+pad(s);
+      var days = Math.floor(d/86400000);
+      var h = Math.floor(d%86400000/3600000), m = Math.floor(d%3600000/60000), s = Math.floor(d%60000/1000);
+      el.textContent = (days > 0 ? days + 'd ' : '') + pad(h)+':'+pad(m)+':'+pad(s);
       setTimeout(tick, 1000);
     }
     tick();
